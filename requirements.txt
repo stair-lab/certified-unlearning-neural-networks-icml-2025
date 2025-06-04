@@ -88,7 +88,6 @@ optax==0.2.4
 optree==0.14.1
 orbax-checkpoint==0.11.8
 pandas==2.2.3
--e git+ssh://git@github.com/anime-sh/distributed_jax.git@f90ca6261f714818f0462f4efd8ad86bc22427c7#egg=parallax
 pillow==11.1.0
 plotly==6.0.0
 pluggy==1.5.0
