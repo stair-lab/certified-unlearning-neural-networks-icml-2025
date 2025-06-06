@@ -26,18 +26,18 @@ unlearning:
   epochs: 50
   optim: "SGD"
   momentum: 0
-  weight_decay: 500.0
+  weight_decay: 0.1
   lr_schedule: "constant"
   noise_schedule: "constant" # 'constant' or 'decreasing'
-  max_lr: 0.001
+  max_lr: 0.1
   init_model_clip: 1.0
   init_model_clip_type: "clip" #clamp or clip
   init_sigma: 0         # 0 for iteration
   algorithm: 'iteration' # 'iteration' or 'contractive_coefficients'
   delta: 0.00001
   iteration:
-    epsilon_renyi_target: 10
-    grad_clip: 100.0
+    epsilon_renyi_target: 100
+    grad_clip: 0.1
     calc_intermediate_eps_renyi: False
 
 

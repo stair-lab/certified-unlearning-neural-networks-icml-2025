@@ -1,7 +1,7 @@
 
 dataset:
-  name: "cifar10"
-  input_shape: [32, 32, 3]
+  name: "mnist"
+  input_shape: [28, 28, 1]
   root: "./data"
   batch_size: 128
   num_workers: 4
@@ -10,33 +10,33 @@ dataset:
   seed: 142
 
 model:
-  name: "tiny_net_cifar"
+  name: "tiny_net"
   n_classes: 10
 
 training:
-  epochs: 400
+  epochs: 30
   optim: "SGD"
   max_lr: 0.06
   momentum: 0
   weight_decay: 0.0005
   lr_schedule: "onecycle"
-  pretrained: "logs/iep18hnq/ckpt"
+  pretrained: "logs/7ij1bj2s/ckpt"
 
 unlearning:
-  epochs: 50
+  epochs: 10
   optim: "SGD"
   momentum: 0
-  weight_decay: 500.0
+  weight_decay: 10.0
   lr_schedule: "constant"
   noise_schedule: "constant" # 'constant' or 'decreasing'
-  max_lr: 0.001
-  init_model_clip: 1.0
+  max_lr: 0.0001
+  init_model_clip: 0.01
   init_model_clip_type: "clip" #clamp or clip
   init_sigma: 0         # 0 for iteration
   algorithm: 'iteration' # 'iteration' or 'contractive_coefficients'
   delta: 0.00001
   iteration:
-    epsilon_renyi_target: 10
+    epsilon_renyi_target: 1
     grad_clip: 100.0
     calc_intermediate_eps_renyi: False
 
