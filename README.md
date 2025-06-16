@@ -95,7 +95,10 @@ This extracts ResNet-18 features from CIFAR-10/100 and saves them for use with t
 If you use this code in your research, please cite:
 
 ```bibtex
-@inproceedings{certified-unlearning-2025,
-
+@article{koloskova2025certified,
+  title={Certified Unlearning for Neural Networks},
+  author={Koloskova, Anastasia and Allouah, Youssef and Jha, Animesh and Guerraoui, Rachid and Koyejo, Sanmi},
+  journal={arXiv preprint arXiv:2506.06985},
+  year={2025}
 }
 ```
